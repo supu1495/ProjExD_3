@@ -167,7 +167,7 @@ def main():
                 return
         if beam is not None:
             if bomb is not None:
-                if beam.rct.colliderect(bomb, rct): #ビームと爆弾の衝突判定
+                if beam.rct.colliderect(bomb.rct): #ビームと爆弾の衝突判定
                     beam = None #ビームを消す
                     bomb = None #爆弾を消す
 
@@ -176,8 +176,7 @@ def main():
         if beam is not None:
             beam.update(screen)
         if bomb is not None:
-            bomb.update(screen)   
-        bomb.update(screen)
+            bomb.update(screen)
         pg.display.update()
         tmr += 1
         clock.tick(50)

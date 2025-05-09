@@ -177,7 +177,7 @@ class Explosin:
         """
         self.life -= 1
         if self.life % 2 == 0:
-            self.imgs = 
+            self.imgs
 
 def main():
     pg.display.set_caption("たたかえ！こうかとん")
@@ -186,7 +186,6 @@ def main():
     bird = Bird((300, 200))
     beam = None
     beams: list[Beam] = []
-    #bomb = Bomb((255, 0, 0), 10)
     bombs = [Bomb((255, 0, 0), 10) for _ in range(NUM_OF_BOMBS)]
     clock = pg.time.Clock()
     tmr = 0
